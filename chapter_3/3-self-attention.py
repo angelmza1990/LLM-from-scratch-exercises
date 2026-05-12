@@ -10,11 +10,17 @@ inputs = torch.tensor(
 )
 
 print("inputs:\n", inputs)
-
+x = torch.tensor([1,2,3])
+w = torch.tensor([[1, 2, 3], [4, 5, 6]])
+result = x @ w.T
+print('w', w)
+print('w.t', w.T)
+print("result of x @ w.T:\n", result)
 x_2 = inputs[1]
+print(w)
 d_in = inputs.shape[1] # 3
 d_out = 2
-
+print('shapes',inputs.shape)
 print("x_2:\n", x_2)
 
 torch.manual_seed(123)
